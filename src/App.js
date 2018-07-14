@@ -13,6 +13,8 @@ class App extends React.Component {
         descreption: undefined,
         error: undefined,
     }
+
+    
     getWeather = async (e) => {
         e.preventDefault();
 
