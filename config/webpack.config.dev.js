@@ -11,6 +11,7 @@ const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
@@ -188,6 +189,15 @@ module.exports = {
               },
             ],
           },
+          {
+            test: /\.scss$/,
+            loaders: [
+              require.resolve('style-loader'),
+              require.resolve('css-loader'),
+              require.resolve('sass-loader'),
+            ]
+
+          },
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
           // In production, they would get copied to the `build` folder.
@@ -204,11 +214,7 @@ module.exports = {
               name: 'static/media/[name].[hash:8].[ext]',
             },
           },
-          {
-            test: /\.scss$/,
-            include: paths.appSrc,
-            loaders: ["style", "css", "sass"]
-          },
+          
         ],
       },
       // ** STOP ** Are you adding a new loader?

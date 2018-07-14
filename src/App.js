@@ -1,7 +1,7 @@
 import React from "react";
-import Titles from "./componants/Title";
-import Form from "./componants/form";
-import Weather from "./componants/weather";
+import Titles from "./components/Title";
+import Form from "./components/form";
+import Weather from "./components/weather";
 
 const API_KEY = "d1c81dca18e2dc4eb49dc00eddbf3743";
 class App extends React.Component {
@@ -55,10 +55,8 @@ class App extends React.Component {
     }
     render() {
         return (
-               
             <div>
                 <Titles />
-              
                 <Form getWeather={this.getWeather} />
                 <Weather
                     temprature={this.state.temprature}
@@ -68,9 +66,6 @@ class App extends React.Component {
                     descreption={this.state.descreption}
                     error={this.state.error} />
             </div>
-            
-    
-
         );
     }
 }
