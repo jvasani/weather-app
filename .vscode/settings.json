@@ -1,0 +1,24 @@
+{
+    "workbench.iconTheme": "vscode-great-icons",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontWeight": "400",
+    "editor.fontSize": 14.5,
+    "editor.fontLigatures": true,
+    "emmet.excludeLanguages": [],
+    "editor.tabCompletion": true,
+    "emmet.showSuggestionsAsSnippets": true,
+    "emmet.triggerExpansionOnTab": true,
+    "workbench.colorTheme": "One Dark Pro",
+    "emmet.includeLanguages": {
+        "javascript": "html",
+    },
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorStyle": "line-thin",
+    "editor.formatOnPaste": true,
+    "files.autoSave": "onWindowChange",
+    "workbench.fontAliasing": "default",
+    "emmet.syntaxProfiles": {
+        "javascript": "html"
+    },
+    
+}
