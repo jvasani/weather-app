@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Titles from "./componants/Title";
 import Form from "./componants/form";
 import Weather from "./componants/weather";
@@ -14,7 +14,7 @@ class App extends React.Component {
         error: undefined,
     }
 
-    
+
     getWeather = async (e) => {
         e.preventDefault();
 
