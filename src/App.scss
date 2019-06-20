@@ -1,181 +1,147 @@
 $font_type: "Fira Code";
 $f_primary: #151e20b6;
 $primary_color: #9eb7be80;
+
 body {
-    margin: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: $primary_color;
-    font-family: $font_type;
+     padding: 0;
+     margin: 0;
+     width: 100%;
+     height: 100%;
+     background-color: $primary_color;
+     font-family: $font_type;
 }
 
 .container::after {
-    content: "";
-    clear: both;
-    display: table;
+     content: "";
+     clear: both;
+     display: table;
 }
 
-.wrapper {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    background-image: url(./img/bg_img.jpeg);
-    background-size: cover;
-    overflow: auto;
-    /* Set up proportionate scaling */
-    width: 100%;
-    height: 100%;
-    /* Set up positioning */
-    position: fixed;
-}
+
 
 .main {
-    height: 90vh;
-    background: $primary_color;
-    box-shadow: 0px 13px 40px -13px rgba(29, 28, 28, 0.849);
-    width: 100%;
-    margin: 0 auto;
-    align-items: center;
+     justify-content: center;
+     align-items: center;
+     height: auto;
+     width: 100%;
+     margin: 0 auto;
+     //background-image: url(./img/bg_img.jpeg);
+     background-size: 100% 100%;
+     overflow: auto;
+
+     .wrapper {
+          display: grid;
+          grid-template-columns: 1fr 2fr auto;
+          ;
+     }
 }
 
 .title_comp {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 90vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     height: 90vh;
 }
 
-.form_comp>form {
-    display: flex;
-    flex-direction: row;
-}
 
-.title_1 {
-    color: $f_primary;
-    margin: 0;
-    font-size: 15px;
-    letter-spacing: 2px;
-    line-height: 1.3;
+.title {
+     color: $f_primary;
+     margin: 0;
+     font-size: 15px;
+     letter-spacing: 2px;
+     line-height: 1.3;
 }
 
 .title_subtitle {
-    font-style: italic;
-    font-weight: 100;
-    letter-spacing: 1px;
-    line-height: 1.5;
+     font-style: italic;
+     font-weight: 100;
+     letter-spacing: 1px;
+     line-height: 1.5;
 }
 
 .form_comp {
-    height: 90vh;
-    padding-top: 60px;
-    padding-left: 50px;
-    color: $f_primary;
-    font-size: 20px;
-    align-content: center;
-    align-items: center
+
+     color: $f_primary;
+     font-size: 20px;
+     align-content: center;
+     align-items: center;
+     display: grid;
+     align-items: center;
+     justify-content: center;
 }
 
 .input {
-    position: relative;
-    outline: 0;
-    display: inline;
-    margin: 1em;
-    max-width: 350px;
-    //width: 30%;
-    color: $f_primary !important;
-    font-weight: lighter;
-    background-color: transparent;
-    border: 0;
-    border-bottom: solid 2px #05ec2c;
+     position: relative;
+     outline: 0;
+     display: inline;
+     margin: 1em;
+     max-width: 350px; //width: 30%;
+     color: $f_primary !important;
+     font-weight: lighter;
+     background-color: transparent;
+     border: 0;
+     border-bottom: solid 2px #05ec2c;
 }
 
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px #c1c8cf inset;
-    -webkit-text-fill-color: $f_primary !important;
+     box-shadow: 0 0 0 30px #c1c8cf;
+     -webkit-box-shadow: 0 0 0 30px #c1c8cf inset;
+     -webkit-text-fill-color: $f_primary !important;
 }
 
 button {
-    border: 0;
-    padding: 8px 20px;
-    margin: 0 2px;
-    border-radius: 2px;
-    font-weight: lighter;
-    letter-spacing: 1px;
-    font-size: 15px;
-    cursor: pointer;
-    background-color: #f16051;
-    color: #fff;
-    font-weight: 100;
-    width: 30%;
-    margin: 1em;
-    &:active {
-        outline: none;
-    }
+     border: 0;
+     padding: 8px 20px;
+     margin: 0 2px;
+     border-radius: 2px;
+     font-weight: lighter;
+     letter-spacing: 1px;
+     font-size: 15px;
+     cursor: pointer;
+     background-color: #f16051;
+     color: #fff;
+     font-weight: 100;
+     width: 30%;
+     margin: 1em;
+
+     &:active {
+          outline: none;
+     }
 }
 
 button:active {
-    outline: none;
+     outline: none;
 }
 
 .weather_comp {
-    margin: 1em;
-    width: 60%;
-    font-size: 20px;
-    font-weight: 200;
-    letter-spacing: 2px;
+     margin: 1em;
+     width: 60%;
+     font-size: 20px;
+     font-weight: 200;
+     letter-spacing: 2px;
 }
 
 .w__key {
-    color: #f16051;
-    border-bottom: solid 2px rgba(255, 255, 255, 0.06);
-    padding: 20px 0 20px 0;
-    font-weight: 400;
-    flex: 1
+     color: #f16051;
+     border-bottom: solid 2px rgba(255, 255, 255, 0.06);
+     padding: 20px 0 20px 0;
+     font-weight: 400;
+     flex: 1
 }
 
 .w__key:last-child {
-    border: 0;
+     border: 0;
 }
 
 .w__value {
-    color: #fff;
-    font-weight: 200;
+     color: #ca0c0c;
+     font-weight: 200;
 }
 
 .w__error {
-    color: #f16051;
-    font-size: 20px;
-    letter-spacing: 1px;
-    font-weight: 200;
+     color: #f16051;
+     font-size: 20px;
+     letter-spacing: 1px;
+     font-weight: 200;
 }
-
-/*
-form>input,
-form>button {
-    outline: 0;
-    border: 0;
-    &:hover {
-        color: #f6f8f8;
-        background-color: #0d0e0d
-    }
-    width: 10em;
-    margin: 5px;
-    padding: 5px;
-    border-bottom: 2px solid #0d0e0d;
-    background-color: $primary_color;
-    width: 100%;
-    background: #fff;
-    box-shadow: 0px 0px 0px 2px transparent;
-    color: #eca29b;
-    -webkit-transition: box-shadow 0.3s;
-    transition: box-shadow 0.3s;
-}
-
-button {
-    &:hover {
-        color: #f6f8f8;
-        background-color: #0d0e0d
-    }
-}*/

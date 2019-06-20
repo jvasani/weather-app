@@ -1,14 +1,14 @@
 {
     "workbench.iconTheme": "vscode-great-icons",
     "editor.fontFamily": "Fira Code",
-    "editor.fontWeight": "400",
+    "editor.fontWeight": "300",
     "editor.fontSize": 14.5,
     "editor.fontLigatures": true,
     "emmet.excludeLanguages": [],
     "editor.tabCompletion": true,
     "emmet.showSuggestionsAsSnippets": true,
     "emmet.triggerExpansionOnTab": true,
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "Visual Studio Dark",
     "emmet.includeLanguages": {
         "javascript": "html",
     },
@@ -20,5 +20,8 @@
     "emmet.syntaxProfiles": {
         "javascript": "html"
     },
-    
+    "editor.lineHeight": 24,
+    "editor.wordWrap": "on",
+    "git.confirmSync": false,
+    "explorer.confirmDelete": false,
 }

@@ -14,7 +14,6 @@ class App extends React.Component {
         error: undefined,
     }
 
-
     getWeather = async (e) => {
         e.preventDefault();
 
@@ -55,28 +54,26 @@ class App extends React.Component {
     }
     render() {
         return (
-            <div className="wrapper">
-                <div className="main">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-xs-5 title_comp">
-                                <Titles />
-                            </div>
-                            <div className="col-xs-7 form_comp">
-                                <Form getWeather={this.getWeather} />
-                                <Weather
-                                    temprature={this.state.temprature}
-                                    city={this.state.city}
-                                    country={this.state.country}
-                                    humidity={this.state.humidity}
-                                    descreption={this.state.descreption}
-                                    error={this.state.error} />
-                            </div>
 
-                        </div>
+            <div className="main">
+                <div className="wrapper">
+                    <div className=" title_comp">
+                        <Titles />
+                    </div>
+                    <div className="form_comp">
+                        <Form getWeather={this.getWeather} />
+                        <Weather
+                            temprature={this.state.temprature}
+                            city={this.state.city}
+                            country={this.state.country}
+                            humidity={this.state.humidity}
+                            descreption={this.state.descreption}
+                            error={this.state.error} />
                     </div>
                 </div>
             </div>
+
+
         );
     }
 }
